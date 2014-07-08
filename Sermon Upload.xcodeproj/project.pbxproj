@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0510428B195356EC00699D37 /* audacity.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 0510428A195356EC00699D37 /* audacity.applescript */; };
+		05182FE11958B75A00C6EE97 /* audacity.applescript in Resources */ = {isa = PBXBuildFile; fileRef = 0510428A195356EC00699D37 /* audacity.applescript */; };
+		051957F0181AEE6700FA06EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051957EF181AEE6700FA06EA /* Cocoa.framework */; };
+		051957FA181AEE6700FA06EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 051957F8181AEE6700FA06EA /* InfoPlist.strings */; };
+		051957FC181AEE6700FA06EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 051957FB181AEE6700FA06EA /* main.m */; };
+		05195800181AEE6700FA06EA /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 051957FE181AEE6700FA06EA /* Credits.rtf */; };
+		05195803181AEE6700FA06EA /* SHCCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05195802181AEE6700FA06EA /* SHCCAppDelegate.m */; };
+		05195806181AEE6700FA06EA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05195804181AEE6700FA06EA /* MainMenu.xib */; };
+		0519580F181AEE6700FA06EA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0519580E181AEE6700FA06EA /* XCTest.framework */; };
+		05195810181AEE6700FA06EA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 051957EF181AEE6700FA06EA /* Cocoa.framework */; };
+		05195818181AEE6700FA06EA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05195816181AEE6700FA06EA /* InfoPlist.strings */; };
+		0519581A181AEE6700FA06EA /* Sermon_UploadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 05195819181AEE6700FA06EA /* Sermon_UploadTests.m */; };
+		058B5CF21820627E0076F4F6 /* SHCCBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 058B5CF11820627E0076F4F6 /* SHCCBrain.m */; };
+		0591CB851952313E002CAEE6 /* logicPro9.applescript in Sources */ = {isa = PBXBuildFile; fileRef = 0591CB841952313E002CAEE6 /* logicPro9.applescript */; };
+		0591CB861952345F002CAEE6 /* logicPro9.applescript in Resources */ = {isa = PBXBuildFile; fileRef = 0591CB841952313E002CAEE6 /* logicPro9.applescript */; };
+		0595B7B31956035100B09050 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0595B7AB195601F400B09050 /* Images.xcassets */; };
+		05977DE4194B46E8001E718F /* SHCCconstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 05977DE3194B46E8001E718F /* SHCCconstants.m */; };
+		05977DE7194B911C001E718F /* FTPKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 05977DE6194B911C001E718F /* FTPKit.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		05A637F41910587E002C74CD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A637F31910587E002C74CD /* CFNetwork.framework */; };
+		05DB394A1963224800AB1969 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DB39491963224800AB1969 /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05195811181AEE6700FA06EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 051957E4181AEE6700FA06EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 051957EB181AEE6700FA06EA;
+			remoteInfo = "Sermon Upload";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0510428A195356EC00699D37 /* audacity.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = audacity.applescript; path = ../audacity.applescript; sourceTree = "<group>"; };
+		051957EC181AEE6700FA06EA /* Sermon Upload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sermon Upload.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		051957EF181AEE6700FA06EA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		051957F2181AEE6700FA06EA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		051957F3181AEE6700FA06EA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		051957F4181AEE6700FA06EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		051957F7181AEE6700FA06EA /* Sermon Upload-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sermon Upload-Info.plist"; sourceTree = "<group>"; };
+		051957F9181AEE6700FA06EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		051957FB181AEE6700FA06EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		051957FD181AEE6700FA06EA /* Sermon Upload-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sermon Upload-Prefix.pch"; sourceTree = "<group>"; };
+		051957FF181AEE6700FA06EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		05195801181AEE6700FA06EA /* SHCCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHCCAppDelegate.h; sourceTree = "<group>"; };
+		05195802181AEE6700FA06EA /* SHCCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHCCAppDelegate.m; sourceTree = "<group>"; };
+		05195805181AEE6700FA06EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		0519580D181AEE6700FA06EA /* Sermon UploadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sermon UploadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0519580E181AEE6700FA06EA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		05195815181AEE6700FA06EA /* Sermon UploadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sermon UploadTests-Info.plist"; sourceTree = "<group>"; };
+		05195817181AEE6700FA06EA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		05195819181AEE6700FA06EA /* Sermon_UploadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sermon_UploadTests.m; sourceTree = "<group>"; };
+		058B5CF01820627E0076F4F6 /* SHCCBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCCBrain.h; sourceTree = "<group>"; };
+		058B5CF11820627E0076F4F6 /* SHCCBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCCBrain.m; sourceTree = "<group>"; };
+		0591CB841952313E002CAEE6 /* logicPro9.applescript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.applescript; name = logicPro9.applescript; path = ../logicPro9.applescript; sourceTree = "<group>"; };
+		0595B7AB195601F400B09050 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		05977DE2194B46E8001E718F /* SHCCconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCCconstants.h; sourceTree = "<group>"; };
+		05977DE3194B46E8001E718F /* SHCCconstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCCconstants.m; sourceTree = "<group>"; };
+		05977DE5194B911C001E718F /* FTPKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPKit.h; sourceTree = "<group>"; };
+		05977DE6194B911C001E718F /* FTPKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPKit.m; sourceTree = "<group>"; };
+		05A637F31910587E002C74CD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		05DB39491963224800AB1969 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		051957E9181AEE6700FA06EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05DB394A1963224800AB1969 /* Carbon.framework in Frameworks */,
+				05A637F41910587E002C74CD /* CFNetwork.framework in Frameworks */,
+				051957F0181AEE6700FA06EA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0519580A181AEE6700FA06EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05195810181AEE6700FA06EA /* Cocoa.framework in Frameworks */,
+				0519580F181AEE6700FA06EA /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		051957E3181AEE6700FA06EA = {
+			isa = PBXGroup;
+			children = (
+				051957F5181AEE6700FA06EA /* Sermon Upload */,
+				05195813181AEE6700FA06EA /* Sermon UploadTests */,
+				051957EE181AEE6700FA06EA /* Frameworks */,
+				051957ED181AEE6700FA06EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		051957ED181AEE6700FA06EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				051957EC181AEE6700FA06EA /* Sermon Upload.app */,
+				0519580D181AEE6700FA06EA /* Sermon UploadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		051957EE181AEE6700FA06EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05DB39491963224800AB1969 /* Carbon.framework */,
+				05A637F31910587E002C74CD /* CFNetwork.framework */,
+				051957EF181AEE6700FA06EA /* Cocoa.framework */,
+				0519580E181AEE6700FA06EA /* XCTest.framework */,
+				051957F1181AEE6700FA06EA /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		051957F1181AEE6700FA06EA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				051957F2181AEE6700FA06EA /* AppKit.framework */,
+				051957F3181AEE6700FA06EA /* CoreData.framework */,
+				051957F4181AEE6700FA06EA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		051957F5181AEE6700FA06EA /* Sermon Upload */ = {
+			isa = PBXGroup;
+			children = (
+				05195801181AEE6700FA06EA /* SHCCAppDelegate.h */,
+				05195802181AEE6700FA06EA /* SHCCAppDelegate.m */,
+				058B5CF01820627E0076F4F6 /* SHCCBrain.h */,
+				058B5CF11820627E0076F4F6 /* SHCCBrain.m */,
+				05977DE5194B911C001E718F /* FTPKit.h */,
+				05977DE6194B911C001E718F /* FTPKit.m */,
+				05977DE2194B46E8001E718F /* SHCCconstants.h */,
+				05977DE3194B46E8001E718F /* SHCCconstants.m */,
+				0591CB841952313E002CAEE6 /* logicPro9.applescript */,
+				0510428A195356EC00699D37 /* audacity.applescript */,
+				05195804181AEE6700FA06EA /* MainMenu.xib */,
+				0595B7AB195601F400B09050 /* Images.xcassets */,
+				051957F6181AEE6700FA06EA /* Supporting Files */,
+			);
+			path = "Sermon Upload";
+			sourceTree = "<group>";
+		};
+		051957F6181AEE6700FA06EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				051957F7181AEE6700FA06EA /* Sermon Upload-Info.plist */,
+				051957F8181AEE6700FA06EA /* InfoPlist.strings */,
+				051957FB181AEE6700FA06EA /* main.m */,
+				051957FD181AEE6700FA06EA /* Sermon Upload-Prefix.pch */,
+				051957FE181AEE6700FA06EA /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05195813181AEE6700FA06EA /* Sermon UploadTests */ = {
+			isa = PBXGroup;
+			children = (
+				05195819181AEE6700FA06EA /* Sermon_UploadTests.m */,
+				05195814181AEE6700FA06EA /* Supporting Files */,
+			);
+			path = "Sermon UploadTests";
+			sourceTree = "<group>";
+		};
+		05195814181AEE6700FA06EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				05195815181AEE6700FA06EA /* Sermon UploadTests-Info.plist */,
+				05195816181AEE6700FA06EA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		051957EB181AEE6700FA06EA /* Sermon Upload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0519581D181AEE6700FA06EA /* Build configuration list for PBXNativeTarget "Sermon Upload" */;
+			buildPhases = (
+				051957E8181AEE6700FA06EA /* Sources */,
+				051957E9181AEE6700FA06EA /* Frameworks */,
+				051957EA181AEE6700FA06EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sermon Upload";
+			productName = "Sermon Upload";
+			productReference = 051957EC181AEE6700FA06EA /* Sermon Upload.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0519580C181AEE6700FA06EA /* Sermon UploadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05195820181AEE6700FA06EA /* Build configuration list for PBXNativeTarget "Sermon UploadTests" */;
+			buildPhases = (
+				05195809181AEE6700FA06EA /* Sources */,
+				0519580A181AEE6700FA06EA /* Frameworks */,
+				0519580B181AEE6700FA06EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05195812181AEE6700FA06EA /* PBXTargetDependency */,
+			);
+			name = "Sermon UploadTests";
+			productName = "Sermon UploadTests";
+			productReference = 0519580D181AEE6700FA06EA /* Sermon UploadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		051957E4181AEE6700FA06EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SHCC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "South Hill Calvary Chapel";
+				TargetAttributes = {
+					0519580C181AEE6700FA06EA = {
+						TestTargetID = 051957EB181AEE6700FA06EA;
+					};
+				};
+			};
+			buildConfigurationList = 051957E7181AEE6700FA06EA /* Build configuration list for PBXProject "Sermon Upload" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				da,
+				de,
+				fr,
+				it,
+				ja,
+				zh_CN,
+				zh_TW,
+				es,
+				pt_BR,
+			);
+			mainGroup = 051957E3181AEE6700FA06EA;
+			productRefGroup = 051957ED181AEE6700FA06EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				051957EB181AEE6700FA06EA /* Sermon Upload */,
+				0519580C181AEE6700FA06EA /* Sermon UploadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		051957EA181AEE6700FA06EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05182FE11958B75A00C6EE97 /* audacity.applescript in Resources */,
+				0595B7B31956035100B09050 /* Images.xcassets in Resources */,
+				0591CB861952345F002CAEE6 /* logicPro9.applescript in Resources */,
+				051957FA181AEE6700FA06EA /* InfoPlist.strings in Resources */,
+				05195800181AEE6700FA06EA /* Credits.rtf in Resources */,
+				05195806181AEE6700FA06EA /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0519580B181AEE6700FA06EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05195818181AEE6700FA06EA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		051957E8181AEE6700FA06EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051957FC181AEE6700FA06EA /* main.m in Sources */,
+				05977DE4194B46E8001E718F /* SHCCconstants.m in Sources */,
+				0510428B195356EC00699D37 /* audacity.applescript in Sources */,
+				0591CB851952313E002CAEE6 /* logicPro9.applescript in Sources */,
+				058B5CF21820627E0076F4F6 /* SHCCBrain.m in Sources */,
+				05195803181AEE6700FA06EA /* SHCCAppDelegate.m in Sources */,
+				05977DE7194B911C001E718F /* FTPKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05195809181AEE6700FA06EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0519581A181AEE6700FA06EA /* Sermon_UploadTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05195812181AEE6700FA06EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 051957EB181AEE6700FA06EA /* Sermon Upload */;
+			targetProxy = 05195811181AEE6700FA06EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		051957F8181AEE6700FA06EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				051957F9181AEE6700FA06EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		051957FE181AEE6700FA06EA /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				051957FF181AEE6700FA06EA /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		05195804181AEE6700FA06EA /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05195805181AEE6700FA06EA /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		05195816181AEE6700FA06EA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05195817181AEE6700FA06EA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0519581B181AEE6700FA06EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0519581C181AEE6700FA06EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0519581E181AEE6700FA06EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sermon Upload/Sermon Upload-Prefix.pch";
+				INFOPLIST_FILE = "Sermon Upload/Sermon Upload-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0519581F181AEE6700FA06EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sermon Upload/Sermon Upload-Prefix.pch";
+				INFOPLIST_FILE = "Sermon Upload/Sermon Upload-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		05195821181AEE6700FA06EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sermon Upload.app/Contents/MacOS/Sermon Upload";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sermon Upload/Sermon Upload-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sermon UploadTests/Sermon UploadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		05195822181AEE6700FA06EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sermon Upload.app/Contents/MacOS/Sermon Upload";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sermon Upload/Sermon Upload-Prefix.pch";
+				INFOPLIST_FILE = "Sermon UploadTests/Sermon UploadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		051957E7181AEE6700FA06EA /* Build configuration list for PBXProject "Sermon Upload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0519581B181AEE6700FA06EA /* Debug */,
+				0519581C181AEE6700FA06EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0519581D181AEE6700FA06EA /* Build configuration list for PBXNativeTarget "Sermon Upload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0519581E181AEE6700FA06EA /* Debug */,
+				0519581F181AEE6700FA06EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05195820181AEE6700FA06EA /* Build configuration list for PBXNativeTarget "Sermon UploadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05195821181AEE6700FA06EA /* Debug */,
+				05195822181AEE6700FA06EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 051957E4181AEE6700FA06EA /* Project object */;
+}
