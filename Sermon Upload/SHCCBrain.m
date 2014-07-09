@@ -154,7 +154,36 @@
     return nil;
 }
 
-
+-(id)postDataToDatabase:(NSString *)url parameters:(NSString *)parameters
+{
+    if (url) {
+        if (! [url hasPrefix:@"http"]) {
+            url = [@"http://" stringByAppendingString:url];
+        }
+        
+        NSError *error;
+        NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[parameters length]]; // length of the data posted
+        
+        // send the request
+        NSMutableURLRequest *theRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+        
+        [theRequest addValue: @"text/plain; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+        [theRequest setHTTPMethod:@"POST"]; // Request method is POST
+        [theRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+        [theRequest setValue:postLength forHTTPHeaderField:@"Content-Length"];
+        [theRequest setHTTPBody: [parameters dataUsingEncoding:NSASCIIStringEncoding  allowLossyConversion:YES]];
+        
+        // get the reponse
+        NSData *responseData = [NSURLConnection sendSynchronousRequest:theRequest returningResponse:nil error:&error];
+        
+        if (!responseData) {
+            return [NSString stringWithFormat: @"Connection Error: %@", [error localizedDescription]];
+        }
+        
+        return [[[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    }
+    return @"Connection Error: URL to script not specified.";
+}
 
 
 

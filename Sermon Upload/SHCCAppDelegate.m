@@ -454,31 +454,32 @@
 {
     [self.uploadingProgress setDoubleValue:100];
     [self.uploadingLabel setStringValue:@"Running MySql script..."];
+    
     NSDictionary *selectedServer = [self getSelectedServer];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     // %@?key=%@&sermonPreacher=%@&sermonDate=%@&sermonService=%@&sermonBook=%@&sermonReference=%@&sermonTitle=%@&sermonType=%@&file=%@&seriesID=%@
-    NSString *scriptURL = [NSString stringWithFormat:@"%@?key=%@&sermonPreacher=%@&sermonDate=%@&sermonService=%@&sermonBook=%@&sermonReference=%@&sermonTitle=%@&sermonType=%@&file=%@&seriesID=%@",
-                                             [selectedServer objectForKey:KserverPresetMysqlAddress],
-                                             [selectedServer objectForKey:KserverPresetMysqlKey],
-                                             [self.postPreacher stringValue],
-                                             [dateFormatter stringFromDate:[self.datePicker dateValue]],
-                                             [self.postService stringValue],
-                                             [self.postBook titleOfSelectedItem],
-                                             [self.postReference stringValue],
-                                             [self.postTitle stringValue],
-                                             [self.postType stringValue],
-                                             self.fileOnServer,
-                                             [self.postSeriesID stringValue]
-                                             ];
-    if (! [scriptURL hasPrefix:@"http://"]) {
-        scriptURL = [@"http://" stringByAppendingString:scriptURL];
-    }
-    scriptURL = [scriptURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *reply = [[NSString stringWithContentsOfURL:[NSURL URLWithString:scriptURL] encoding:NSUTF8StringEncoding error:nil] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *parameters = [NSString stringWithFormat:@"key=%@&sermonPreacher=%@&sermonDate=%@&sermonService=%@&sermonBook=%@&sermonReference=%@&sermonTitle=%@&sermonType=%@&file=%@&seriesID=%@",
+                            [selectedServer objectForKey:KserverPresetMysqlKey],
+                            [self.postPreacher stringValue],
+                            [dateFormatter stringFromDate:[self.datePicker dateValue]],
+                            [self.postService stringValue],
+                            [self.postBook titleOfSelectedItem],
+                            [self.postReference stringValue],
+                            [self.postTitle stringValue],
+                            [self.postType stringValue],
+                            self.fileOnServer,
+                            [self.postSeriesID stringValue]];
+    id reply = [self.brain postDataToDatabase:[selectedServer objectForKey: KserverPresetMysqlAddress] parameters:parameters];
+
     [self.mainWindow endSheet:self.uploadingSheet];
-    if ([reply isNotEqualTo:@"Error"]) {
-        NSAlert *alert = [NSAlert alertWithMessageText:@"Sermon Successfully Posted." defaultButton:@"OK" alternateButton:@"View Page" otherButton:nil informativeTextWithFormat:@""];
+        
+    if (! [reply hasPrefix:@"Connection Error:"]) {
+        id altButton = nil;
+        if ([reply hasPrefix:@"http"]) {
+            altButton = @"View Page";
+        }
+        NSAlert *alert = [NSAlert alertWithMessageText:@"Sermon Successfully Posted." defaultButton:@"OK" alternateButton:altButton otherButton:nil informativeTextWithFormat:@""];
         [alert beginSheetModalForWindow:self.mainWindow completionHandler:^(NSModalResponse returnCode) {
             if (returnCode == NSAlertAlternateReturn) {
                 [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:reply]];

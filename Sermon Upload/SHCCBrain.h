@@ -24,5 +24,6 @@
 -(BOOL)fileExists:(NSString *)fileName inDirectoryListing:(NSArray *)directoryListing;
 -(void)sortServerColumns:(NSInteger)showFoldersAboveFiles;
 -(id)runScript:(NSString *)pathToScript withParameters:(NSArray *)parameters;
+-(id)postDataToDatabase:(NSString *)url parameters:(NSString *)parameters;
 
 @end
