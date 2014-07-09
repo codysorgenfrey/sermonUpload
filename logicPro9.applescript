@@ -22,6 +22,7 @@ on do_script (localPathToRawFile, localPathToWorkspace, sermonFileName, sermonTi
         click button "Open" of window named "Open File" of process "Logic Pro"
     end tell
     
+    tell application "Sermon Upload" to activate
     display dialog "Edit Your Sermon and Come Back When You're Done!" buttons {"Cancel", "Upload"} default button "Upload"
     
     tell application "System Events"

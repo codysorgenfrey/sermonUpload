@@ -12,6 +12,7 @@ on do_script(localPathToRawFile, localPathToWorkspace, sermonFileName, sermonTit
         click button "Open" of window 1 of process "Audacity"
     end tell
     
+    tell application "Sermon Upload" to activate
     display dialog "Edit Your Sermon and Come Back When You're Done!" buttons {"Cancel", "Upload"} default button "Upload"
     
     tell application "System Events"
@@ -26,44 +27,37 @@ on do_script(localPathToRawFile, localPathToWorkspace, sermonFileName, sermonTit
         click pop up button 1 of group 1 of group 1 of sheet 1 of window 1 of process "Audacity"
         click menu item "MP3 Files" of menu 1 of pop up button 1 of group 1 of group 1 of sheet 1 of window 1 of process "Audacity"
         click button "Save" of sheet 1 of window 1 of process "Audacity"
+        delay 0.5
+        click button "Clear" of window 1 of process "Audacity"
+        delay 0.5
         keystroke (ASCII character 29)
-		keystroke (sermonPreacher as string)
-		keystroke return
-		keystroke (ASCII character 8)
-		delay 0.5
-		keystroke "a" using command down
-		keystroke (sermonTitle as string)
-		keystroke return
-		keystroke (ASCII character 8)
-		delay 0.5
-		keystroke "a" using command down
-		keystroke (sermonBook as string)
-		keystroke return
-		keystroke (ASCII character 8)
-		delay 0.5
-		keystroke "a" using command down
-		keystroke (sermonCount as string)
-		keystroke return
-		keystroke (ASCII character 8)
-		delay 0.5
-		keystroke "a" using command down
-		keystroke ((year of (current date)) as string)
-		keystroke return
-		keystroke (ASCII character 31)
-		keystroke (ASCII character 31)
-		keystroke (ASCII character 8)
-		delay 0.5
-		keystroke "a" using command down
-		keystroke "Sermon Upload/Audacity"
-		keystroke return
-		keystroke (ASCII character 30)
-		keystroke (ASCII character 30)
-		keystroke (ASCII character 30)
-		keystroke (ASCII character 8)
-		delay 0.5
-		keystroke "a" using command down
-		keystroke "Bible Teaching"
-		keystroke return
+        keystroke (sermonPreacher as string)
+        keystroke return
+        keystroke (ASCII character 8)
+        delay 0.5
+        keystroke "a" using command down
+        keystroke (sermonTitle as string)
+        keystroke return
+        keystroke (ASCII character 8)
+        delay 0.5
+        keystroke "a" using command down
+        keystroke (sermonBook as string)
+        keystroke return
+        keystroke (ASCII character 8)
+        delay 0.5
+        keystroke "a" using command down
+        keystroke (sermonCount as string)
+        keystroke return
+        keystroke (ASCII character 8)
+        delay 0.5
+        keystroke "a" using command down
+        keystroke ((year of (current date)) as string)
+        keystroke return
+        keystroke (ASCII character 8)
+        delay 0.5
+        keystroke "a" using command down
+        keystroke "Bible Teaching"
+        keystroke return
         click button "OK" of window 1 of process "Audacity"
     end tell
     
