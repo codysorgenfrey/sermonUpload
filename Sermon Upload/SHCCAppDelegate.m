@@ -476,10 +476,10 @@
     if ([reply isNotEqualTo:@"Error"]) {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Sermon Successfully Posted." defaultButton:@"OK" alternateButton:@"View Page" otherButton:nil informativeTextWithFormat:@""];
         [alert beginSheetModalForWindow:self.mainWindow completionHandler:^(NSModalResponse returnCode) {
-        if (returnCode == NSAlertAlternateReturn) {
-            [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:reply]];
-        }
-    }];
+            if (returnCode == NSAlertAlternateReturn) {
+                [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:reply]];
+            }
+        }];
         if ([self.deleteLocalFilesWhenDone state] == NSOnState) {
             NSURL *rawFile = [NSURL fileURLWithPath: [self.postRawLocation stringValue]];
             NSURL *rawFileAif = [NSURL fileURLWithPath: [[[self.postRawLocation stringValue] stringByDeletingPathExtension] stringByAppendingPathExtension:@"aif"]];
