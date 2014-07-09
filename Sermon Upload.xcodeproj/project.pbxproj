@@ -505,7 +505,7 @@
 				0519581C181AEE6700FA06EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		0519581D181AEE6700FA06EA /* Build configuration list for PBXNativeTarget "Sermon Upload" */ = {
 			isa = XCConfigurationList;
@@ -514,7 +514,7 @@
 				0519581F181AEE6700FA06EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		05195820181AEE6700FA06EA /* Build configuration list for PBXNativeTarget "Sermon UploadTests" */ = {
 			isa = XCConfigurationList;
@@ -523,7 +523,7 @@
 				05195822181AEE6700FA06EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

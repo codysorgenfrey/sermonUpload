@@ -81,7 +81,7 @@ on do_script(localPathToRawFile, localPathToWorkspace, sermonFileName, sermonTit
         tell application "Sermon Upload" to activate
     end try
     
-    return "mp3"
+    return (sermonFileName & ".mp3")
 end do_script
 
 on audacityRunning()

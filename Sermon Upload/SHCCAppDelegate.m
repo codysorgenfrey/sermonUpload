@@ -191,8 +191,6 @@
 
 - (IBAction)postSermon:(id)sender
 {
-    NSString *pathToScript;
-    
     [self.postProgress startAnimation:sender];
     
     NSString *sermonFileName = [self.brain createFileNameForSermonType:[self.postType stringValue]
@@ -202,17 +200,17 @@
                                                           withPreacher:[self.postPreacher stringValue]
                                                               withDate:[self.datePicker dateValue]];
     
-    NSString *serverFile = [[self.postServerLocation stringValue] stringByAppendingPathComponent:sermonFileName];
+    NSArray *directoryListing = [self.ftpKit getDirectoryListingForPathSync:[self.postServerLocation stringValue]];
     
-    NSArray *directoryListing = [self.ftpKit getDirectoryListingForPathSync:[serverFile stringByDeletingLastPathComponent]];
-    
-    BOOL exists = [self.brain fileExists:serverFile inDirectoryListing: directoryListing];
+    BOOL exists = [self.brain fileExists:sermonFileName inDirectoryListing: directoryListing];
     if (exists) {
         while (exists) {
-            serverFile = [serverFile stringByAppendingString:@"_copy"];
-            exists = [self.brain fileExists:serverFile inDirectoryListing:[self.ftpKit getDirectoryListingForPathSync:[serverFile stringByDeletingLastPathComponent]]];
+            sermonFileName = [sermonFileName stringByAppendingString:@"_copy"];
+            exists = [self.brain fileExists:sermonFileName inDirectoryListing: directoryListing];
         }
     }
+    
+    NSString *pathToScript;
     
     if ([self.audioEditingScript indexOfSelectedItem] == 0) {
         pathToScript = [[NSBundle mainBundle] pathForResource:@"logicPro9" ofType:@"applescript"];
@@ -230,21 +228,27 @@
     NSArray *parameters = [NSArray arrayWithObjects: pathToScript,
                            [self.postRawLocation stringValue],
                            [[self.postRawLocation stringValue] stringByDeletingLastPathComponent],
-                           [serverFile lastPathComponent],
+                           sermonFileName,
                            [self.postTitle stringValue],
                            [self.postPreacher stringValue],
                            [self.postBook titleOfSelectedItem],
                            [[NSNumber numberWithInteger:sermonCount] stringValue],
                            nil];
-    id fileExtension = [self.brain runScript:pathToScript withParameters:parameters];
+    id reply = [self.brain runScript:pathToScript withParameters:parameters];
     
-    if ([fileExtension isNotEqualTo: nil]) {
-         NSString *localEditedFile = [[[self.postRawLocation stringValue] stringByDeletingLastPathComponent] stringByAppendingPathComponent:[[serverFile lastPathComponent] stringByAppendingPathExtension:fileExtension]];
+    if ([reply isNotEqualTo: nil]) {
+        NSString *localEditedFile = [[[self.postRawLocation stringValue] stringByDeletingLastPathComponent] stringByAppendingPathComponent: reply];
         
-        [self.mainWindow beginSheet:self.uploadingSheet completionHandler:NULL];
-        [self.uploadingLabel setStringValue:@"Uploading..."];
-        [self.ftpKit uploadFile:localEditedFile toServerPath:[serverFile stringByDeletingLastPathComponent] onUpdate:@selector(ftpKitDidUpload:fileSize:) onComplete:@selector(ftpKitDidFinishUploadingFile)];
-        self.fileOnServer = [serverFile stringByAppendingPathExtension:fileExtension];
+        if ([[NSFileManager defaultManager] fileExistsAtPath: localEditedFile]) {
+            self.fileOnServer = [[self.postServerLocation stringValue] stringByAppendingPathComponent:reply];
+            
+            [self.mainWindow beginSheet:self.uploadingSheet completionHandler:NULL];
+            [self.uploadingLabel setStringValue:@"Uploading..."];
+            [self.ftpKit uploadFile:localEditedFile toServerPath: [self.postServerLocation stringValue] onUpdate:@selector(ftpKitDidUpload:fileSize:) onComplete:@selector(ftpKitDidFinishUploadingFile)];
+        } else {
+            NSAlert *alert = [NSAlert alertWithMessageText:@"Cannot find edited file." defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"Applescript did not make the specified file at the specified path."];
+            [alert beginSheetModalForWindow:self.mainWindow completionHandler:NULL];
+        }
     } else {
         NSAlert *alert = [NSAlert alertWithMessageText:@"Unknown Error" defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:@"Check applescript if you are using a custom applescript."];
         [alert beginSheetModalForWindow:self.mainWindow completionHandler:NULL];
